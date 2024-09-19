@@ -1,419 +1,621 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Bhumi - Real Estate HTML Template </title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-</head>
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
 
-<body>
+      <!-- CSS here -->
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+      <link rel="stylesheet" href="assets/css/spacing.css">
+      <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- start page-wrapper -->
-    <div class="page-wrapper">
-        <!-- start preloader -->
-        <div class="preloader">
-            <div class="vertical-centered-box">
-                <div class="content">
-                    <div class="loader-circle"></div>
-                    <div class="loader-line-mask">
-                        <div class="loader-line"></div>
-                    </div>
-                    <img src="assets/images/preloader.png" alt="">
-                </div>
+      <style>
+          /* Bubble Buttons */
+        .bubble-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .bubble {
+            background-color: #5758d6;
+            color: white;
+            border: none;
+            border-radius: 10%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .bubble:hover {
+            background-color: #4144b0;
+        }
+
+        /* Forms */
+        .form-container {
+            display: none; /* Hidden by default */
+            background-color: #fff;
+            padding: 30px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #5758d6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #4144b0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-row {
+               flex-direction: column;
+            }
+
+            .bubble {
+                width: 100px;
+                height: 100px;
+                font-size: 16px;
+            }
+        }
+      </style>
+   </head>
+   <body>
+      <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+
+      <!-- pre loader area start -->
+      <div id="loading">
+         <div class="loader-mask">
+            <div class="loader">
+              <div></div>
+              <div></div>
             </div>
-        </div>
-        <!-- end preloader -->
-        <!-- Start header -->
-        <header id="header">
-            <div class="topbar">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col col-md-7 col-sm-12 col-12">
-                            <div class="contact-intro">
-                                <ul>
-                                    <li><i class="fi ti-location-pin"></i>7 Green Lake Street Crawfordsville</li>
-                                    <li><i class="fi flaticon-email"></i> charito@gmail.com</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-md-5 col-sm-12 col-12">
-                            <div class="contact-info">
-                                <ul>
-                                    <li>Visit our social pages</li>
-                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end topbar -->
-            <div class="wpo-site-header">
-                <nav class="navigation navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                                <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar first-angle"></span>
-                                        <span class="icon-bar middle-angle"></span>
-                                        <span class="icon-bar last-angle"></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-6">
-                                <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-1 col-1">
-                                <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
-                                    <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home Charity</a></li>
-                                                <li><a href="index-2.html">Home Education</a></li>
-                                                <li><a href="index-3.html">Home Wildlife</a></li>
-                                                <li><a href="index-4.html">Home Ocean Polution</a></li>
-                                                <li><a href="index-5.html">Home World Pandemic</a></li>
-                                                <li><a href="index-6.html">Home Nature</a></li>
-                                                <li><a href="index-7.html">Home Nature S2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a  href="#">Causes</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="cause.html">Causes</a></li>
-                                                <li><a href="cause-single.html">Causes Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Events</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="event.html">Events</a></li>
-                                                <li><a href="event-s2.html">Events S2</a></li>
-                                                <li><a href="event-single.html">Events Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="service-single.html">Service Single</a></li>
-                                                <li><a href="project.html">Project</a></li>
-                                                <li><a href="project-single.html">Project Single</a></li>
-                                                <li><a href="donate.html">Donate</a></li>
-                                                <li><a href="team-single.html">Volunteer</a></li>
-                                                <li><a href="testimonial.html">Testimonial</a></li>
-                                                <li><a href="404.html">Error 404</a></li>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="register.html">Sign Up</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog details</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog-single.html">Blog details right sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-single-left-sidebar.html">Blog details left
-                                                                sidebar</a></li>
-                                                        <li><a href="blog-single-fullwidth.html">Blog details
-                                                                fullwidth</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="active" href="contact.html">Contact</a></li>
-                                    </ul>
-    
-                                </div><!-- end of nav-collapse -->
-                            </div>
-                            <div class="col-lg-3 col-md-2 col-2">
-                                <div class="header-right">
-                                    <div class="close-form">
-                                        <a class="theme-btn-s2" href="donate.html">Donate Now</a>
-                                    </div>
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- end of container -->
-                </nav>
+         </div>
+      </div>
+      <!-- pre loader area end -->
+
+
+      <!-- back to top start -->
+      <div class="back-to-top-wrapper">
+         <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>               
+         </button>
+      </div>
+      <!-- back to top end --> 
+
+      <!-- offcanvas area start -->
+      <div class="offcanvas__area">
+         <div class="offcanvas__close">
+            <button class="offcanvas__close-btn offcanvas-close-btn">
+               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 1L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+               </svg>
+            </button>
+         </div>
+         <div class="offcanvas__wrapper">
+            <div class="offcanvas__content">
+               <div class="offcanvas__top mb-40">
+                  <div class="offcanvas__logo">
+                     <a href="index.html">
+                        <img src="assets/img/logo/logo-whitenNew.png" alt="logo">
+                     </a>
+                  </div>
+               </div>
+
+               <div class="tp-offcanvas-menu fix d-xl-none mb-30">
+                  <nav></nav>
+               </div>
+
+               <div class="offcanvas__contact d-none d-xl-block">
+                  <div class="offcanvas__text mb-30">
+                     <p>The design readable content of a page hen looking at its layout The point our of using Movie template</p>
+                  </div>
+                  <div class="offcanvas__gallery mb-30">
+                     <h4 class="offcanvas__title">Gallery</h4>
+
+                  </div>
+               </div>
+               <div class="offcanvas-info mb-30">
+                  <h4 class="offcanvas__title">Contacts</h4>
+                  <div class="offcanvas__contact-content d-flex">
+                     
+                    
+                  </div>
+                  <div class="offcanvas__contact-content d-flex">
+                     <div class="offcanvas__contact-content-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                     </div>
+                     <div class="offcanvas__contact-content-content">
+                        <a href="mailto:needhelp@company.com"> cuglegacy@gmail.com </a>
+                     </div>
+                  </div>
+                  <div class="offcanvas__contact-content d-flex">
+                     <div class="offcanvas__contact-content-icon">
+                        <i class="fa-solid fa-phone"></i>
+                     </div>
+                     <div class="offcanvas__contact-content-content">
+                        <a href="tel:+19196625542"> (919) 662-5542 </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="offcanvas__social">
+                  <a class="icon facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="icon twitter" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="icon youtube" href="#"><i class="fab fa-youtube"></i></a>
+                  <a class="icon linkedin" href="#"><i class="fab fa-linkedin"></i></a>
+               </div>
             </div>
-        </header>
-        <!-- end of header -->
-        <!-- start of breadcumb-section -->
-        <div class="wpo-breadcumb-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="wpo-breadcumb-wrap">
-                            <h2>Contact Us</h2>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>contact</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end of wpo-breadcumb-section-->
+         </div>
+      </div>
+      <div class="body-overlay"></div>
+      <!-- offcanvas area end -->
 
-        <!-- start wpo-contact-pg-section -->
-        <section class="wpo-contact-pg-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-lg-10 offset-lg-1">
-                        <div class="office-info">
-                            <div class="row">
-                                <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div class="office-info-item">
-                                        <div class="office-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-placeholder"></i>
-                                            </div>
-                                        </div>
-                                        <div class="office-info-text">
-                                            <h2>Address</h2>
-                                            <p>7 Green Lake Street Crawfordsville, IN 47933</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div class="office-info-item">
-                                        <div class="office-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-email"></i>
-                                            </div>
-                                        </div>
-                                        <div class="office-info-text">
-                                            <h2>Email Us</h2>
-                                            <p>Charito@gmail.com</p>
-                                            <p>helloyou@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div class="office-info-item">
-                                        <div class="office-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-phone-call"></i>
-                                            </div>
-                                        </div>
-                                        <div class="office-info-text">
-                                            <h2>Call Now</h2>
-                                            <p>+1 800 123 456 789</p>
-                                            <p>+1 800 123 654 987</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
+      
+      <!-- header area start -->
+      <header class="tp-header-5-ptb p-relative">
+         <div class="tp-header-main-sticky p-relative">
+            <div class="container container-large">
+               <div class="row align-items-center">
+                  <div class="col-xl-2 col-lg-4 col-md-3 col-6">
+                     <div class="tp-header-logo">
+                        <a href="index.html">
+                           <img src="assets/img/logo/Logo.png" alt="">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-4 d-none d-lg-block">
+                     <div class="tp-header-2-menu">
+                        <div class="tp-main-menu d-none d-xl-block">
+                           <nav class="tp-mobile-menu-active">
+                              <ul>
+                                 <li>
+                                    <a class="hover" href="index.html">Home</a>
+                                 </li>
+                                 <li><a href="about.html">About</a> </li>
+                                 <li><a href="pillars.html">Pillars</a></li>
+                                 <li><a href="programs.html">Programs</a></li>
+                                 <li><a href="re.html">Real Estate</a></li>
+                                 <li><a href="contact.html">Contact</a></li>
+                              </ul>
+                           </nav>
                         </div>
-                        <div class="wpo-contact-title">
-                            <h2>Have Any Question?</h2>
-                            <p>It is a long established fact that a reader will be distracted
-                                content of a page when looking.</p>
-                        </div>
-                        <div class="wpo-contact-form-area">
-                            <form method="post" class="contact-validation-active" id="contact-form-main">
-                                <div>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
-                                </div>
-                                <div>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*">
-                                </div>
-                                <div>
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone*">
-                                </div>
-                                <div>
-                                    <select name="subject" class="form-control">
-                                        <option disabled="disabled" selected>Subject</option>
-                                        <option>Subject 1</option>
-                                        <option>Subject 2</option>
-                                        <option>Subject 3</option>
-                                    </select>
-                                </div>
-                                <div class="fullwidth">
-                                    <textarea class="form-control" name="note"  id="note" placeholder="Message..."></textarea>
-                                </div>
-                                <div class="submit-area">
-                                    <button type="submit" class="theme-btn">Get in Touch</button>
-                                    <div id="loader">
-                                        <i class="ti-reload"></i>
-                                    </div>
-                                </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>                
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end wpo-contact-pg-section -->
-
-        <!--  start wpo-contact-map -->
-        <section class="wpo-contact-map-section">
-            <h2 class="hidden">Contact map</h2>
-            <div class="wpo-contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671" allowfullscreen></iframe>
-            </div>
-        </section>
-        <!-- end wpo-contact-map -->
-
-
-        <!-- start of wpo-site-footer-section -->
-        <footer class="wpo-site-footer">
-            <div class="wpo-upper-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget about-widget">
-                                <div class="logo widget-title">
-                                    <img src="assets/images/logo2.png" alt="blog">
-                                </div>
-                                <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-twitter-alt"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-google"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title">
-                                    <h3>Services </h3>
-                                </div>
-                                <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="cause.html">Causes</a></li>
-                                    <li><a href="blog.html">Latest News</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
-                                    <li><a href="event.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
-                            <div class="widget wpo-service-link-widget">
-                                <div class="widget-title">
-                                    <h3>Contact </h3>
-                                </div>
-                                <div class="contact-ft">
-                                    <p>Would you have any enquiries.Please feel free to contuct us</p>
-                                    <ul>
-                                        <li><i class="fi flaticon-mail"></i>charito@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+888 (123) 869523</li>
-                                        <li><i class="fi flaticon-location"></i>New York – 1075 Firs Avenue</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-9 col-6">
+                     <div class="tp-header-5-main-right d-flex align-items-center justify-content-end">
                         
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget instagram">
-                                <div class="widget-title">
-                                    <h3>Projects</h3>
-                                </div>
-                                <ul class="d-flex">
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg" alt=""></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- end container -->
-            </div>
-            <div class="wpo-lower-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2021 Charito Theme. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- end of wpo-site-footer-section -->
-    </div>
-    <!-- end of page-wrapper -->
+                        <div class="tp-header-5-contact mr-30">
+                           <a href="tel:+19196625542">
+                              <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                 <path d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10"/>
+                                 <path d="M20.0002 4H15.2002M20.0002 4V8.8V4Z" stroke="#5758D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                               </svg></span>
+                               (919) 662-5542
 
-    <!-- All JavaScript files
-    ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
-</body>
+                           </a>
+                        </div>
 
+                        <div class="tp-header-5-btn d-none d-md-block">
+                           <a class="tp-btn" href="contact.html">
+                              <span class="btn-wrap">
+                                 <b class="text-1">Contact Us</b>
+                                 <b class="text-2">Contact Us</b>
+                              </span>
+                           </a>
+                        </div>
+
+                        <div class="tp-header-hamburger d-xl-none offcanvas-open-btn">
+                           <button class="hamburger-btn">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <header class="tp-header-2-ptb p-relative tp-int-menu tp-header-sticky-cloned">
+         <div class="tp-header-main-sticky tp-header-5-main p-relative">
+            <div class="container container-large">
+               <div class="row align-items-center">
+                  <div class="col-xl-2 col-lg-4 col-md-3 col-6">
+                     <div class="tp-header-logo">
+                        <a href="index.html">
+                           <img src="assets/img/logo/Logo.png" alt="">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-4 d-none d-lg-block">
+                     <div class="tp-header-2-menu">
+                        <div class="tp-main-menu d-none d-xl-block">
+                           <nav>
+                              <ul>
+                                 <li>
+                                    <a class="hover" href="index.html">Home</a>
+                                 </li>
+                                 <li><a href="about.html">About</a> </li>
+                                 <li><a href="pillars.html">Pillars</a></li>
+                                 <li><a href="programs.html">Programs</a></li>
+                                 <li><a href="re.html">Real Estate</a></li>
+                                 <li><a href="contact.html">Contact</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-9 col-6">
+                     <div class="tp-header-5-main-right d-flex align-items-center justify-content-end">
+                        
+                        <div class="tp-header-5-contact mr-30">
+                           <a href="tel:+19196625542">
+                              <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                 <path d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10"/>
+                                 <path d="M20.0002 4H15.2002M20.0002 4V8.8V4Z" stroke="#5758D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                               </svg></span>
+                               (919) 662-5542
+                           </a>
+                        </div>
+
+                        <div class="tp-header-5-btn d-none d-md-block">
+                           <a class="tp-btn" href="contact.html">
+                              <span class="btn-wrap">
+                                 <b class="text-1">Contact Us</b>
+                                 <b class="text-2">Contact Us</b>
+                              </span>
+                           </a>
+                        </div>
+
+                        <div class="tp-header-hamburger d-xl-none offcanvas-open-btn">
+                           <button class="hamburger-btn">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- header area end -->
+
+      <main>
+
+      <!-- breadcrumb area start -->
+      <section class="tp-breadcrumb__ptb p-relative z-index-1 fix">
+         <div class="tp-breadcrumb__bg" data-background="assets/img/others/breadcrumb.jpg"></div>
+         <div class="tp-breadcrumb__text">
+            <h3 class="tp-breadcrumb__text-title">CUG</h3>
+         </div>
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-sm-12">
+                  <div class="tp-breadcrumb__content">
+                     <h3 class="tp-breadcrumb__title">Contact us</h3>
+                     <div class="tp-breadcrumb__list">
+                        <span><a href="index.html">Home</a></span>
+                        <span class="dvdr"></span>
+                        <span>Contact us</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- breadcrumb area end -->
+   
+
+      <!-- contact area start -->
+      <section class="tp-contact-inner-ptb pt-130 pb-120">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="tp-contact-inner-heading mb-30">
+                     <span class="tp-section-title-pre">FEEL FREE TO CONTACT WITH US</span>
+                     <h3 class="tp-section-title">Contact with us<br>
+                        at any time.</h3>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="tp-contact-inner-item-box d-flex flex-wrap">
+                     <div class="tp-contact-inner-item">
+                        <span class="tp-contact-inner-item-title">Raleigh</span>
+                       
+                        <a href="tel:+19196625542 "><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                           <path d="M14.6473 12.22C14.6473 12.46 14.594 12.7066 14.4806 12.9466C14.3673 13.1866 14.2207 13.4133 14.0273 13.6266C13.7007 13.9866 13.3407 14.2466 12.934 14.4133C12.534 14.58 12.1007 14.6666 11.634 14.6666C10.954 14.6666 10.2273 14.5066 9.46065 14.18C8.69398 13.8533 7.92732 13.4133 7.16732 12.86C6.40065 12.3 5.67398 11.68 4.98065 10.9933C4.29398 10.3 3.67398 9.57331 3.12065 8.81331C2.57398 8.05331 2.13398 7.29331 1.81398 6.53998C1.49398 5.77998 1.33398 5.05331 1.33398 4.35998C1.33398 3.90665 1.41398 3.47331 1.57398 3.07331C1.73398 2.66665 1.98732 2.29331 2.34065 1.95998C2.76732 1.53998 3.23398 1.33331 3.72732 1.33331C3.91398 1.33331 4.10065 1.37331 4.26732 1.45331C4.44065 1.53331 4.59398 1.65331 4.71398 1.82665L6.26065 4.00665C6.38065 4.17331 6.46732 4.32665 6.52732 4.47331C6.58732 4.61331 6.62065 4.75331 6.62065 4.87998C6.62065 5.03998 6.57398 5.19998 6.48065 5.35331C6.39398 5.50665 6.26732 5.66665 6.10732 5.82665L5.60065 6.35331C5.52732 6.42665 5.49398 6.51331 5.49398 6.61998C5.49398 6.67331 5.50065 6.71998 5.51398 6.77331C5.53398 6.82665 5.55398 6.86665 5.56732 6.90665C5.68732 7.12665 5.89398 7.41331 6.18732 7.75998C6.48732 8.10665 6.80732 8.45998 7.15398 8.81331C7.51398 9.16665 7.86065 9.49331 8.21398 9.79331C8.56065 10.0866 8.84732 10.2866 9.07398 10.4066C9.10732 10.42 9.14732 10.44 9.19398 10.46C9.24732 10.48 9.30065 10.4866 9.36065 10.4866C9.47398 10.4866 9.56065 10.4466 9.63398 10.3733L10.1407 9.87331C10.3073 9.70665 10.4673 9.57998 10.6207 9.49998C10.774 9.40665 10.9273 9.35998 11.094 9.35998C11.2207 9.35998 11.354 9.38665 11.5007 9.44665C11.6473 9.50665 11.8007 9.59331 11.9673 9.70665L14.174 11.2733C14.3473 11.3933 14.4673 11.5333 14.5406 11.7C14.6073 11.8666 14.6473 12.0333 14.6473 12.22Z" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10"/>
+                           <path d="M13.3338 2.66666H10.1338M13.3338 2.66666V5.86666V2.66666Z" stroke="#5758D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg></span>(919) 662-5542                        </a>
+                        <a href="mailto:biz.sophiamckinleyy@gmail.com"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                           <path d="M1.33301 5.66668C1.33301 3.33334 2.66634 2.33334 4.66634 2.33334H11.333C13.333 2.33334 14.6663 3.33334 14.6663 5.66668V10.3333C14.6663 12.6667 13.333 13.6667 11.333 13.6667H4.66634" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M11.3337 6L9.24699 7.66667C8.56032 8.21333 7.43366 8.21333 6.74699 7.66667L4.66699 6" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M1.33301 11H5.33301" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M1.33301 8.33334H3.33301" stroke="#5758D6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg></span> biz.sophiamckinleyy@gmail.com</a>
+                     </div>
+                    
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- contact area end -->
+      <div class="container">
+         <h2>The COME UP Group Forms</h2>
+ 
+         <!-- Bubble Buttons -->
+         <div class="bubble-container">
+             <button class="bubble" onclick="showForm(1)">Registration</button>
+             <button class="bubble" onclick="showForm(2)">Potential Member</button>
+             <button class="bubble" onclick="showForm(3)">Business Owner</button>
+         </div>
+ 
+         <!-- Form 1: Registration Form -->
+         <div class="form-container" id="form1">
+             <h3>Registration Form</h3>
+             <form>
+                 <div class="form-group">
+                     <label for="name">Name</label>
+                     <input type="text" id="name" placeholder="Enter your name">
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="email">Email</label>
+                     <input type="email" id="email" placeholder="Enter your email">
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="message">Message</label>
+                     <textarea id="message" rows="4" placeholder="Your message"></textarea>
+                 </div>
+ 
+                 <button type="submit">Submit</button>
+             </form>
+         </div>
+ 
+         <!-- Form 2: Potential Member Form -->
+         <div class="form-container" id="form2">
+             <h3>Potential Member Form</h3>
+             <form>
+                 <div class="form-row">
+                     <div class="form-group">
+                         <label for="full-name">Full Name</label>
+                         <input type="text" id="full-name" placeholder="Enter your full name">
+                     </div>
+                     <div class="form-group">
+                         <label for="age">Age</label>
+                         <input type="number" id="age" placeholder="Enter your age">
+                     </div>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="address">Address</label>
+                     <input type="text" id="address" placeholder="Enter your address">
+                 </div>
+ 
+                 <div class="form-row">
+                     <div class="form-group">
+                         <label for="phone">Phone</label>
+                         <input type="tel" id="phone" placeholder="Enter your phone number">
+                     </div>
+                     <div class="form-group">
+                         <label for="email-pm">Email</label>
+                         <input type="email" id="email-pm" placeholder="Enter your email">
+                     </div>
+                 </div>
+ 
+                 <div class="form-row">
+                     <div class="form-group">
+                         <label for="occupation">Occupation</label>
+                         <input type="text" id="occupation" placeholder="Enter your occupation">
+                     </div>
+                     <div class="form-group">
+                         <label for="business-owner">Are you a Business Owner? If so, what type?</label>
+                         <input type="text" id="business-owner" placeholder="Enter business type">
+                     </div>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="business-details">Business Details</label>
+                     <textarea id="business-details" rows="4" placeholder="Tell us more about your business"></textarea>
+                 </div>
+ 
+                 <button type="submit">Submit</button>
+             </form>
+         </div>
+ 
+         <!-- Form 3: Business Owner Form -->
+         <div class="form-container" id="form3">
+             <h3>Business Owner Form</h3>
+             <form>
+                 <div class="form-row">
+                     <div class="form-group">
+                         <label for="business-name">Full Name</label>
+                         <input type="text" id="business-name" placeholder="Enter your full name">
+                     </div>
+                     <div class="form-group">
+                         <label for="virtual-available">Available Virtual Meet Times</label>
+                         <input type="text" id="virtual-available" placeholder="Enter available times for a virtual meet">
+                     </div>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="business-type">Are you a Business Owner? If so, what type?</label>
+                     <textarea id="business-type" rows="4" placeholder="Tell us more about your business"></textarea>
+                 </div>
+ 
+                 <button type="submit">Submit</button>
+             </form>
+         </div>
+     </div>
+ 
+     
+ 
+   
+
+
+    
+
+      </main>
+      
+     <!-- footer area start -->
+     <footer class="tp-footer-area p-relative pt-140">
+      <div class="tp-footer-bg"></div>
+      <div class="container">
+         <div class="tp-footer-widget-border">
+            <div class="row">
+               <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                  <div class="tp-footer-widget tp-footer-col-1 mb-50">
+                     <div class="tp-footer-logo mb-35">
+                        <a href="index.html"> <img src="assets/img/logo/logo-whitenNew.png" alt=""></a>
+                     </div>
+                     <div class="tp-footer-widget-content">
+                        <p>Better Together.</p>
+                        <div class="tp-footer-widget-contact">
+                           <a href="tel:+19196625542"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M0 16.33C0 16.69 0.0801201 17.06 0.250376 17.42C0.420631 17.78 0.640961 18.12 0.931396 18.44C1.42213 18.98 1.96294 19.37 2.57386 19.62C3.17476 19.87 3.82574 20 4.52679 20C5.54832 20 6.63996 19.76 7.79169 19.27C8.94342 18.78 10.0951 18.12 11.2369 17.29C12.3886 16.45 13.4802 15.52 14.5218 14.49C15.5533 13.45 16.4847 12.36 17.316 11.22C18.1372 10.08 18.7982 8.94 19.2789 7.81C19.7596 6.67 20 5.58 20 4.54C20 3.86 19.8798 3.21 19.6395 2.61C19.3991 2 19.0185 1.44 18.4877 0.94C17.8468 0.31 17.1457 0 16.4046 0C16.1242 0 15.8438 0.0600001 15.5934 0.18C15.333 0.3 15.1027 0.48 14.9224 0.74L12.5989 4.01C12.4186 4.26 12.2884 4.49 12.1983 4.71C12.1082 4.92 12.0581 5.13 12.0581 5.32C12.0581 5.56 12.1282 5.8 12.2684 6.03C12.3986 6.26 12.5889 6.5 12.8292 6.74L13.5904 7.53C13.7006 7.64 13.7506 7.77 13.7506 7.93C13.7506 8.01 13.7406 8.08 13.7206 8.16C13.6905 8.24 13.6605 8.3 13.6405 8.36C13.4602 8.69 13.1497 9.12 12.7091 9.64C12.2584 10.16 11.7777 10.69 11.2569 11.22C10.7161 11.75 10.1953 12.24 9.6645 12.69C9.14372 13.13 8.71307 13.43 8.37256 13.61C8.32248 13.63 8.26239 13.66 8.19229 13.69C8.11217 13.72 8.03205 13.73 7.94191 13.73C7.77166 13.73 7.64146 13.67 7.5313 13.56L6.77015 12.81C6.51978 12.56 6.27942 12.37 6.04907 12.25C5.81873 12.11 5.58838 12.04 5.33801 12.04C5.14772 12.04 4.94742 12.08 4.72709 12.17C4.50676 12.26 4.27641 12.39 4.02604 12.56L0.711065 14.91C0.450676 15.09 0.270405 15.3 0.16024 15.55C0.060091 15.8 0 16.05 0 16.33Z" fill="currentColor"/>
+                            </svg> +(919) 662-5542 </span></a>
+                            <p>cuglegacy@gmail.com</p>
+                        </div>
+                        <div class="tp-footer-widget-social">
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                           <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="tp-footer-widget tp-footer-col-2 mb-50">
+                     <h3 class="tp-footer-widget-title">Quick Link</h3>
+                     <div class="tp-footer-widget-content">
+                        <ul>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="pillars.html">Pillars</a></li>
+                           <li><a href="re.html">Real Estate</a></li>
+                           <li><a href="programs.html">Programs</a></li>
+                           <li><a href="#">Our Faq</a></li>
+                           <li><a href="contact.html">Contact  </a></li>
+                        </ul>
+                     </div>
+                  </div> 
+               </div>
+              
+            </div>
+         </div>
+         <div class="tp-footer-copyright-ptb pt-20 pb-20">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="tp-footer-copyright text-center">
+                     <p>©2024. Created with passion by Circuit Tech Solutions LLC. All rights reserved.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- footer area end -->
+
+
+      <!-- JS here -->
+       <script src="assets/js/vendor/jquery.js"></script>
+      <!-- JavaScript to Handle Form Toggle -->
+    <script>
+      function showForm(formId) {
+          // Hide all forms
+          document.getElementById('form1').style.display = 'none';
+          document.getElementById('form2').style.display = 'none';
+          document.getElementById('form3').style.display = 'none';
+
+          // Show the selected form
+          document.getElementById('form' + formId).style.display = 'block';
+      }
+  </script>
+  </script>
+      <script src="assets/js/range-slider.js"></script>
+      <script src="assets/js/bootstrap-bundle.js"></script>
+      <script src="assets/js/swiper-bundle.js"></script>
+      <script src="assets/js/magnific-popup.js"></script>
+      <script src="assets/js/purecounter.js"></script>
+      <script src="assets/js/imagesloaded-pkgd.js"></script>
+      <script src="assets/js/isotope-pkgd.js"></script>
+      <script src="assets/js/nice-select.js"></script>
+      <script src="assets/js/wow.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
+
