@@ -4031,6 +4031,8 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /*  2.8 Breadcrumb
 /*----------------------------------------*/
+.tp-breadcrumb__bg {
+  background-image: url('assets/img/About.jpg');}
 .tp-breadcrumb__ptb {
   padding-top: 220px;
   padding-bottom: 230px;
