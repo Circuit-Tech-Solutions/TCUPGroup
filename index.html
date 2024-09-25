@@ -53,31 +53,60 @@
 
       </script>
       <style>
-        /* Countdown Timer Styles */
+/* Countdown Timer Styles */
 .countdown {
-   display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 24px;  /* Slightly larger text for better visibility */
-   color: #ffffff;  /* White text for contrast */
+   font-size: 24px; /* Default font size for larger screens */
+   color: #ffffff; /* White text for contrast */
    font-weight: bold;
    margin-bottom: 30px; /* Adds more spacing below the countdown */
-   gap: 15px; /* Adds spacing between countdown items */
 }
 
+/* Countdown Item Styling */
 .countdown-item {
-   display: inline-block;
    padding: 10px 15px;
-   background-color: rgba(255, 255, 255, 0.2);  /* Light transparent background for contrast */
-   border-radius: 10px;  /* Rounded corners for a modern look */
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Adds a subtle shadow for depth */
-   min-width: 60px;  /* Consistent width for each block */
+   background-color: rgba(255, 255, 255, 0.2); /* Light transparent background for contrast */
+   border-radius: 10px; /* Rounded corners for a modern look */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+   text-align: center; /* Center text */
+}
+
+/* Styling for Number and Label */
+.countdown-item span {
+   display: block;
+   font-size: 32px; /* Larger font for numbers */
+}
+
+.countdown-item div {
+   font-size: 16px; /* Smaller font for labels (Days, Hours, etc.) */
+   color: #ff9800; /* Accent color for labels */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+   .countdown {
+      flex-direction: row; /* Stack items horizontally */
+   }
+
+   .countdown-item {
+      min-width: 100px; /* Adjust width for better visibility when stacked */
+   }
+}
+
+@media (max-width: 480px) {
+   .countdown {
+      font-size: 18px; /* Smaller font size for mobile screens */
+      gap: 8px; /* Less spacing between items */
+   }
+
+   .countdown-item {
+      padding: 8px 12px; /* Adjust padding for mobile */
+      min-width: 80px; /* Adjust width for mobile */
+   }
 }
 
 
-
-
-         
       </style>
       
    </head>
@@ -442,20 +471,36 @@
                                     <div><span>Find Your Future</span></div> 
                                     <div><span>Invest in Real Estate, and Build a Legacy</span></div>
                                 </div>
+                                <hr>
                                     <!-- Event Details -->
                                     <div id="event-details" class="tp-event-details" style="margin-top: 20px;">
                                        <h3 style="font-size: 36px; color: #fff; font-weight: 800;">The COME UP Conference</h3>
                                        <p style="font-size: 24px; color: #ff9800; font-weight: bold;">November 16th, 2024 - Cary, NC</p>
                                     </div>
 
-                                    <!-- Countdown Timer -->
-                                 <div class="countdown" style="margin-top: 20px;">
-                                    <span class="days countdown-item"></span> Days 
-                                    <span class="hours countdown-item"></span> Hours 
-                                    <span class="minutes countdown-item"></span> Minutes 
-                                    <span class="seconds countdown-item"></span> Seconds
-                                 </div>
-                                 <!-- End Countdown Timer -->
+                                    <div class="container text-center my-4">
+                                       <div class="row justify-content-center countdown">
+                                          <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                             <span class="days">51</span>
+                                             <div>Days</div>
+                                          </div>
+                                          <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                             <span class="hours">8</span>
+                                             <div>Hours</div>
+                                          </div>
+                                          <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                             <span class="minutes">5</span>
+                                             <div>Minutes</div>
+                                          </div>
+                                          <div class="col-auto countdown-item mx-2">
+                                             <span class="seconds">30</span>
+                                             <div>Seconds</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    
+                                    
+                                    
 
                                        </div>
                                        <div class="tp-hero-3-button-wrapper">
@@ -484,13 +529,28 @@
                                  <h3 style="font-size: 36px; color: #fff; font-weight: 800;">The COME UP Conference</h3>
                                  <p style="font-size: 24px; color: #ff9800; font-weight: bold;">November 16th, 2024 - Cary, NC</p>
                               </div>
-
-                              <div class="countdown" style="margin-top: 20px;">
-                                 <span class="days countdown-item"></span> Days 
-                                 <span class="hours countdown-item"></span> Hours 
-                                 <span class="minutes countdown-item"></span> Minutes 
-                                 <span class="seconds countdown-item"></span> Seconds
+                              <hr>
+                              <div class="container text-center my-4">
+                                 <div class="row justify-content-center countdown">
+                                    <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                       <span class="days">51</span>
+                                       <div>Days</div>
+                                    </div>
+                                    <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                       <span class="hours">8</span>
+                                       <div>Hours</div>
+                                    </div>
+                                    <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                       <span class="minutes">5</span>
+                                       <div>Minutes</div>
+                                    </div>
+                                    <div class="col-auto countdown-item mx-2">
+                                       <span class="seconds">30</span>
+                                       <div>Seconds</div>
+                                    </div>
+                                 </div>
                               </div>
+                              
                                 
                               </div>
                               <div class="tp-hero-3-button-wrapper">
@@ -516,20 +576,34 @@
                                  <div><span>with Real Estate and Empowerment</span></div>
                                 </div>
                              </div>
+                             <hr>
                                <!-- Event Details -->
                                <div id="event-details" class="tp-event-details" style="margin-top: 20px;">
                                  <h3 style="font-size: 36px; color: #fff; font-weight: 800;">The COME UP Conference</h3>
                                  <p style="font-size: 24px; color: #ff9800; font-weight: bold;">November 16th, 2024 - Cary, NC</p>
                               </div>
 
-                             <!-- Countdown Timer -->
-                             <div class="countdown" style="margin-top: 20px;">
-                              <span class="days countdown-item"></span> Days 
-                              <span class="hours countdown-item"></span> Hours 
-                              <span class="minutes countdown-item"></span> Minutes 
-                              <span class="seconds countdown-item"></span> Seconds
-                           </div>
-                           <!-- End Countdown Timer -->
+                              <div class="container text-center my-4">
+                                 <div class="row justify-content-center countdown">
+                                    <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                       <span class="days">51</span>
+                                       <div>Days</div>
+                                    </div>
+                                    <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                       <span class="hours">8</span>
+                                       <div>Hours</div>
+                                    </div>
+                                    <div class="col-auto countdown-item mx-2 mb-3 mb-md-0">
+                                       <span class="minutes">5</span>
+                                       <div>Minutes</div>
+                                    </div>
+                                    <div class="col-auto countdown-item mx-2">
+                                       <span class="seconds">30</span>
+                                       <div>Seconds</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              
                                 
                               </div>
                               <div class="tp-hero-3-button-wrapper">

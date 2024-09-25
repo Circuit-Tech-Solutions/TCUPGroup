@@ -2733,12 +2733,12 @@ body .ui-tooltip {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-slider-active {
-    height: 650px;
+    height: 950px;
   }
 }
 @media only screen and (max-width: 767px) {
   .tp-slider-active {
-    height: 540px;
+    height: 940px;
   }
 }
 .tp-slider-active .swiper-slide-active .tp-hero-3-title div span {
