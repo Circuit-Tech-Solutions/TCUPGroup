@@ -2729,7 +2729,7 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /** Swiper styles **/
 .tp-slider-active {
-  height: 940px;
+  height: 1000px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-slider-active {

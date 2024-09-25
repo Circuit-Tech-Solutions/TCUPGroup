@@ -19,6 +19,67 @@
       <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
       <link rel="stylesheet" href="assets/css/spacing.css">
       <link rel="stylesheet" href="assets/css/main.css">
+      <script>
+         // Set the date for the event
+         var eventDate = new Date("November 16, 2024 00:00:00").getTime();
+
+         // Update the countdown every 1 second
+         var countdownTimer = setInterval(function() {
+            var now = new Date().getTime();
+            var timeLeft = eventDate - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Update each countdown element on the page
+            document.querySelectorAll('.countdown').forEach(function(countdown) {
+               countdown.querySelector('.days').textContent = days;
+               countdown.querySelector('.hours').textContent = hours;
+               countdown.querySelector('.minutes').textContent = minutes;
+               countdown.querySelector('.seconds').textContent = seconds;
+            });
+
+            // If the countdown is over, display a message
+            if (timeLeft < 0) {
+               clearInterval(countdownTimer);
+               document.querySelectorAll('.countdown').forEach(function(countdown) {
+                  countdown.textContent = "The event has started!";
+               });
+            }
+         }, 1000);
+
+      </script>
+      <style>
+        /* Countdown Timer Styles */
+.countdown {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 24px;  /* Slightly larger text for better visibility */
+   color: #ffffff;  /* White text for contrast */
+   font-weight: bold;
+   margin-bottom: 30px; /* Adds more spacing below the countdown */
+   gap: 15px; /* Adds spacing between countdown items */
+}
+
+.countdown-item {
+   display: inline-block;
+   padding: 10px 15px;
+   background-color: rgba(255, 255, 255, 0.2);  /* Light transparent background for contrast */
+   border-radius: 10px;  /* Rounded corners for a modern look */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Adds a subtle shadow for depth */
+   min-width: 60px;  /* Consistent width for each block */
+}
+
+
+
+
+         
+      </style>
+      
    </head>
    <body>
       <!--[if lte IE 9]>412
@@ -381,12 +442,26 @@
                                     <div><span>Find Your Future</span></div> 
                                     <div><span>Invest in Real Estate, and Build a Legacy</span></div>
                                 </div>
-                                
-                              </div>
-                              <div class="tp-hero-3-button-wrapper">
-                                 <a class="tp-btn" href="about.html">Discover More</a>
-                              </div>
-                           </div>
+                                    <!-- Event Details -->
+                                    <div id="event-details" class="tp-event-details" style="margin-top: 20px;">
+                                       <h3 style="font-size: 36px; color: #fff; font-weight: 800;">The COME UP Conference</h3>
+                                       <p style="font-size: 24px; color: #ff9800; font-weight: bold;">November 16th, 2024 - Cary, NC</p>
+                                    </div>
+
+                                    <!-- Countdown Timer -->
+                                 <div class="countdown" style="margin-top: 20px;">
+                                    <span class="days countdown-item"></span> Days 
+                                    <span class="hours countdown-item"></span> Hours 
+                                    <span class="minutes countdown-item"></span> Minutes 
+                                    <span class="seconds countdown-item"></span> Seconds
+                                 </div>
+                                 <!-- End Countdown Timer -->
+
+                                       </div>
+                                       <div class="tp-hero-3-button-wrapper">
+                                          <a class="tp-btn" href="about.html">Discover More</a>
+                                       </div>
+                                    </div>
                         </div>
                      </div>
                      <div class="tp-hero-3-bg" data-background="assets/img/hero/homebg/dunn.jpg"></div>
@@ -396,7 +471,7 @@
                   <div class="tp-hero-3-item">
                      <div class="container">
                         <div class="row">
-                           <div class="col-lg-10">
+                           <div class="col-lg-10 mb-5">
                               <div class="tp-hero-3-title-wrapper">
                                  <div class="tp-hero-3-title-pre">
                                     <div><span>Empowering your path to wealth through real estate and community</span></div>
@@ -404,7 +479,18 @@
                                 <div class="tp-hero-3-title">
                                  <div><span>Your Gateway to Smart Investments</span></div>
                              </div>
-                             
+                               <!-- Event Details -->
+                               <div id="event-details" class="tp-event-details" style="margin-top: 20px;">
+                                 <h3 style="font-size: 36px; color: #fff; font-weight: 800;">The COME UP Conference</h3>
+                                 <p style="font-size: 24px; color: #ff9800; font-weight: bold;">November 16th, 2024 - Cary, NC</p>
+                              </div>
+
+                              <div class="countdown" style="margin-top: 20px;">
+                                 <span class="days countdown-item"></span> Days 
+                                 <span class="hours countdown-item"></span> Hours 
+                                 <span class="minutes countdown-item"></span> Minutes 
+                                 <span class="seconds countdown-item"></span> Seconds
+                              </div>
                                 
                               </div>
                               <div class="tp-hero-3-button-wrapper">
@@ -430,6 +516,20 @@
                                  <div><span>with Real Estate and Empowerment</span></div>
                                 </div>
                              </div>
+                               <!-- Event Details -->
+                               <div id="event-details" class="tp-event-details" style="margin-top: 20px;">
+                                 <h3 style="font-size: 36px; color: #fff; font-weight: 800;">The COME UP Conference</h3>
+                                 <p style="font-size: 24px; color: #ff9800; font-weight: bold;">November 16th, 2024 - Cary, NC</p>
+                              </div>
+
+                             <!-- Countdown Timer -->
+                             <div class="countdown" style="margin-top: 20px;">
+                              <span class="days countdown-item"></span> Days 
+                              <span class="hours countdown-item"></span> Hours 
+                              <span class="minutes countdown-item"></span> Minutes 
+                              <span class="seconds countdown-item"></span> Seconds
+                           </div>
+                           <!-- End Countdown Timer -->
                                 
                               </div>
                               <div class="tp-hero-3-button-wrapper">
@@ -476,6 +576,12 @@
          </div>
       </div>
       <!-- hero area end -->
+
+
+ 
+<!-- event section end -->
+
+
 
 
       <!-- experience area start
